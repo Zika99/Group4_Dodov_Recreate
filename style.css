@@ -20,3 +20,12 @@ background: #1e1f1c;
     margin: auto;
 }
     
+.content-container{
+    background-color: orange;
+    display: flex;
+}
+.left-bar{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
