@@ -2,21 +2,91 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Fira Code", monospace;
+}
+p {
+   color: #D9D9D4; 
 }
 body{
 width:100%;
 background: #1e1f1c;
 }
-.nav-link{
-    
-    background: #1e1f1c;
-}
-
 .container{
     max-width: 797px;
     height: 1776px;
-       background: #272822;
-       fill: #f8f8f2;
+    background: #272822;
     margin: auto;
 }
-    
+/* ----------------------------For Nav bar---------------------------------------------------------- */
+.nav-link{
+    background-color: #1e1f1c;
+    display: inline-flex;
+    width:100%;
+    padding-top: 70px;
+}
+div.container nav.nav-link div.navLinkBlog {
+    background-color: #272822;
+}
+div.container nav .navLink a, div.container nav.nav-link div.navLinkBlog a {
+    text-decoration: none;
+    color: #C6C6C5;
+}
+div.container nav.nav-link div.navLink, div.container nav.nav-link div.navLinkBlog {
+    width: 15%;
+    padding: 8px 10px 8px 10px;
+    margin-right: 1px;
+}    
+div.container nav.nav-link div.navLink {
+    background-color:#34352F ;
+}
+.mainContent {
+    display: flex;
+}
+/* ----------------------------For numbers--------------------------------------------------------------- */
+.numbers {
+    margin-top: 25px;
+}
+.eachNumber {
+    color:#72736C;
+    padding: 3px 20px 3px 35px;
+    text-align: right;
+}
+
+
+/* ----------------------------For imgs and writeups----------------------------------------------------- */
+.heading {
+    margin: 30px 0;
+}
+.heading h1, .blogWriteUp h1 a {
+    font-size: 20px;
+    color: #DCDCD5;
+}
+.paragraphs p {
+    font-size: 18px;
+}
+.writeUptime {
+    font-size: 13px;
+}
+
+.imgAndWriteUp {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.blogImgs img {
+    width: 100%;
+}
+.blogImgs {
+    width: 24.5%;
+    margin-right: 15px;
+}
+.blogWriteUp {
+    width: 62% ;
+}
+.blogWriteUp-heading a:hover {
+    color:RGB(78, 148, 206);
+}
+.paragraphs {
+    height: 3rem;
+}
