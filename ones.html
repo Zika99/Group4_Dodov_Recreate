@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of ones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <nav class="nav-link">
+            <div class="navLink"><a href="">home</a></div>
+            <div class="navLinkBlog"><a href="">blog</a></div>
+            <div class="navLink"><a href="">projects</a></div>
+        </nav>
+        <div class="content-container">
+            <div class="left-bar">
+                <div class="left-num"><span>1</span></div>
+                <div><span>2</span></div>
+                <div><span>3</span></div>
+                <div><span>4</span></div>
+                <div><span>5</span></div>
+                <div><span>6</span></div>
+                <div><span>7</span></div>
+                <div><span>8</span></div>
+                <div><span>9</span></div>
+                <div><span>10</span></div>
+                <div><span>11</span></div>
+                <div><span>12</span></div>
+                <div><span>13</span></div>
+                <div><span>14</span></div>
+                <div><span>15</span></div>
+                <div><span>16</span></div>
+                <div><span>17</span></div>
+                <div><span>18</span></div>
+                <div><span>19</span></div>
+                <div><span>20</span></div>
+                <div><span>21</span></div>
+                <div><span>22</span></div>
+                <div><span>23</span></div>
+                <div><span>24</span></div>
+                <div><span>25</span></div>
+                <div><span>26</span></div>
+                <div><span>27</span></div>
+                <div><span>28</span></div>
+                <div><span>29</span></div>
+                <div><span>30</span></div>
+                <div><span>31</span></div>
+                <div><span>32</span></div>
+                <div><span>33</span></div>
+                <div><span>34</span></div>
+                <div><span>35</span></div>
+                <div><span>36</span></div>
+                <div><span>37</span></div>
+                <div><span>38</span></div>
+                <div><span>39</span></div>
+                <div><span>40</span></div>
+                <div><span>41</span></div>
+                <div><span>1</span></div>
+                <div><span>2</span></div>
+
+            </div>
+            <div class="right-bar">
+
+
+                <section>
+                    <div class="ones">
+                        <div class="of">
+                            <h1 class="ofone">Number of Ones</h1>
+                            <p>Calculating digits in a series of numbers.</p>
+                        </div>
+
+                        <div class="time">
+                            <p>06 Aug 2022</p>
+                            <p>292 lines</p>
+                        </div>
+                    </div>
+                    <img class="cover" src="img/number-of-ones-cover.png" style="width:640px; height:360px;">
+                    <div>
+                        <p class="in"> In this post, I'll explain my solution to the programming puzzle from <a>the latest issue
+                            </a>
+
+                            of <a>@cassidoo's newsletter.</a></p>
+
+                        <p class="task">The task is simple:</p>
+                    </div>
+
+
+                    <blockquote class="bloc">
+                        <p class="blop">> Given an integer n, count the total number of 1 digits</p>
+                        <p class="blop">> appearing in all non-negative integers less than</p>
+                        <p class="blop">> or equal to n.</p>
+                    </blockquote>
+
+                    <div class="perh">
+                        <p class="per">
+                            Perhaps the most obvious solution is to just loop over the numbers, convert them to strings,
+                            and count the digits. But the larger the input number, the slower it gets. So, rather than
+                            counting, we can calculate the result.
+
+                            
+                        </p>
+                    </div>
+
+                    <h2 class="ide">Idea</h2>
+
+                    <p class="let">Let's start with the number of times that the digit 1 appears in the 0-9 range. It's just one.
+                        The number 1.</p>
+                    <p class="now">Now, let's try 0-99. Here we have the same thing, with the difference being that it's repeated 10
+                        times:</p>
+
+                    <div class="code">
+                        <pre>
+        <code>
+            1, 11, 21, 31, 41, 51, 61, 71, 81, 91
+            ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑ (10)
+        </code>
+    </pre>
+                    </div>
+
+                    <p>In total, the digit 1 appears 20 times in the numbers up to 99:</p>
+
+                    <div>
+                        <ul>
+                            <li>10 times as a digit in the units column</li>
+                            <li>10 times as a digit in the tens column</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+
+                    <p>If we look at the numbers 0-999, we'll start to see patterns.</p>
+                    <p>Now, 1 appears in the units column not 10, but 100 times:</p>
+
+                    <div>
+                        <pre>
+        <code>
+            1, 11, 21... 131, 141, 151... 321, 641, 961... 991
+            ↑   ↑   ↑      ↑    ↑    ↑      ↑    ↑    ↑      ↑ (100)
+        </code>
+    </pre>
+                    </div>
+
+
+                    <div>
+                        <p>Notice how we can just take the last digit off the number and get the number of times 1 will
+                            appear at the units position. For example, if we have 236, we can take the 6 out and know
+                            that 1 will surely appear 23 times as a units digit. In this case, however, we must add one,
+                            because 231 is also part of the collection. If the end number was 230, we wouldn't have
+                            that.</p>
+                        <p>Now, we can do the same, but for the tens. If we remove the 36 from 236, we get 2. So we know
+                            that the digit 1 will cycle 2 times in the tens column:</p>
+                    </div>
+
+                    <div>
+                        <pre>
+        <code>
+            10-19, 110-119
+            ↑  ↑    ↑   ↑
+        </code>
+    </pre>
+                    </div>
+
+                    <div>
+                        <p>But since the tens digit is 3, which is bigger than 1, we get one extra cycle, namely
+                            210-219.
+                            If we had 206, 0 is less than 1, so we wouldn't get that extra cycle.</p>
+                        <p>The special case is when the digit is 1. If we have 216, then we get an incomplete extra
+                            cycle of only 7 repetitions, rather than 10. We go through 210-216, not 210-219. So the
+                            occurrences of 1 in the tens column depends on columns to the right. This time, we have to
+                            remove digits from the left side. For the number 216, we remove 21 from it and get 6. We
+                            then have to add 1, because even though 210 has 0 in the units, it still counts. We end up
+                            with 7, which is the number of ones in the incomplete cycle. Here's the entire calculation:
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre>
+        <code>
+            236
+            ││└  23*1 +   1*1 extra (because 6 > 1) =  24
+            │└─  2*10 +  1*10 extra (because 3 > 1) =  30
+            └── 0*100 + 1*100 extra (because 2 > 1) = 100
+                                              total = 154
+        </code>
+    </pre>
+                    </div>
+                    <div>
+                        <p>Notice how we have a multiplier for each digit,
+                            and it increases exponentially: 1 for units, 10 for tens, 100 for hundreds.</p>
+                        <h2>Implementation</h2>
+                        <p>Let's start with the multiplier. In code, we can loop over the digits in reverse to get it:
+                        </p>
+                    </div>
+
+                    <div>
+                        <pre>
+                            <code>
+                                [6, 3, 2].forEach((digit, i) => {
+                                    let mul = Math.pow(10, i); <span class="opac">// 1, 10, 100</span>
+                                });
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <p>Now, we have to be able to take digits out of the number. In our first iteration, for the
+                            units, we have to take 23 out of<code>236</code> . We can do that by dividing the number by 10, getting
+                            <code>23.6</code>. We can then round it down with <code>Math.floor()</code> to get <code>23</code>.</p>
+                        <p>For the tens, we have to get 2 out of <code>236</code>. We can do that by dividing by <code>100</code>, getting 2.36,
+                            and rounding down to <code>2</code>.</p>
+                        <p>Basically, we multiply our multiplier by 10, divide, then floor, and we have successfully
+                            taken out the necessary digits:</p>
+                    </div>
+
+                    <div>
+                        <pre>
+        <code>
+            236
+            ││└ mul = 1;   236/(mul*10) = 236/10   = 23.6; round(23.6) = 23;
+            │└─ mul = 10;  236/(mul*10) = 236/100  = 2.36; round(2.36) = 2;
+            └── mul = 100; 236/(mul*10) = 236/1000 = 0.23; round(0.23) = 0;
+        </code>
+    </pre>
+                    </div>
+
+
+                    <div>
+                        <p>All that's left now is to apply the multiplier to those numbers and we get the number of
+                            complete cycles with a 1 that each digit goes through:</p>
+                    </div>
+
+
+
+                    <div>
+                        <pre>
+        <code>
+            236
+            ││└  23*1 = 23
+            │└─  2*10 = 20
+            └── 0*100 = 0
+        </code>
+    </pre>
+                    </div>
+
+                    <div>
+                        <p>In code, we can do it like this:</p>
+                    </div>
+
+                    <div>
+                        <pre>
+        <code>
+            let cycles = Math.floor(n / (mul * 10));
+            let ones = cycles * mul;
+        </code>
+    </pre>
+                    </div>
+
+<div>
+    <p>Now, we have to handle cases where the digit is greater than 1. That's when we have one extra cycle:</p>
+</div>
+
+<div>
+    <pre>
+<code>
+    236
+    └─ 3 > 1 => extra cycle (210-219)
+   
+   206
+    └─ 0 < 1 => no extra cycle (we don't reach 210)
+</code>
+</pre>
+</div>
+
+<div>
+    <p>We add an extra <code>if</code> statement:</p>
+</div>
+
+
+<div>
+    <pre>
+<code>
+    let cycles = Math.floor(n / (mul * 10));
+    let ones = cycles * mul;
+    
+    if (digit > 1) {
+        ones += mul; <span class="opac">// add one extra cycle</span>
+    }
+</code>
+</pre>
+</div>
+
+<div>
+<p>Finally, we have the edge case where the digit is exactly 1.
+     This is where we have an incomplete cycle and the result depends on the digits to the right:</p>
+    </div>
+
+
+    <div>
+        <pre>
+    <code>
+        216
+        └─ just 10-16, not 10-19, so we extract 6
+       
+       136
+       └── just 100-136, not 100-199, so we extract 36
+    </code>
+    </pre>
+    </div>
+
+    <div>
+        <p>We can get digits on the right by applying<code>%</code>, the <a>remainder operator</a>, to the number and the multiplier:</p>
+    </div>
+
+    <div>
+        <pre>
+            <code>
+                216 % 10  = divide by 10 and get the remainder  => 6
+                136 % 100 = divide by 100 and get the remainder => 36
+            </code>
+            </pre>
+    </div>
+
+
+    <div>
+        <p>However, we must add 1 to that remainder, because we need to count the 0 as well. In other words, for the tens, we have:</p>
+    </div>
+
+    <div>
+        <pre>
+            <code>
+                216 % 10  = divide by 10 and get the remainder  => 6
+                136 % 100 = divide by 100 and get the remainder => 36
+            </code>
+            </pre>
+    </div>
+
+    
+    <div>
+        <p>So we need to extend our if statement:</p> 
+    </div>
+    
+
+    <div>
+        <pre>
+            <code>
+                210, 211, 212, 213, 214, 215, 216 => 7 numbers in total
+                └┴───────────────────────────────── this counts as well
+            </code>
+            </pre>
+    </div>
+
+<div>
+    <p>So we need to extend our if statement:</p> 
+</div>
+
+
+    <div>
+        <pre>
+            <code>
+                if (digit > 1) {
+                    ones += mul; <span class="opac">// add one extra cycle</span>
+                } else if (digit === 1) {
+                    ones += (n % mul) + 1; <span class="opac">// incomplete cycle</span>
+                }
+            </code>
+            </pre>
+    </div>
+
+<div>
+    <p>Put together, our logic looks like this:</p>
+</div>
+
+    <div>
+        <pre>
+            <code>
+                let n = 236;
+                let strings = n.toString().split("");     <span class="opac">// ["2", "3", "6"]</span> 
+                let ints = strings.map((s) => parseInt(s)); <span class="opac">// [2, 3, 6]</span>
+                let digits = ints.reverse();                <span class="opac">// [6, 3, 2]</span>
+                let sum = 0;
+                
+                digits.forEach((digit, i) => {
+                    let mul = Math.pow(10, i);
+                    let cycles = Math.floor(n / (mul * 10));
+                    let ones = cycles * mul;
+                
+                    if (digit > 1) {
+                        ones += mul; // add one extra cycle
+                    } else if (digit === 1) {
+                        ones += (n % mul) + 1; <span class="opac">// incomplete cycle</span>
+                    }
+                
+                    sum += ones;
+                });
+                
+                console.log(sum); <span class="opac">// 154</span>
+            </code>
+            </pre>
+    </div>
+
+<div>
+    <p>Now, we can wrap that logic in an easily reusable function and use <code>reduce()</code> to accumulate the sum:</p>
+</div>
+
+
+    <div>
+        <pre>
+            <code>
+                function numberOfOnes(n) {
+                    return n
+                        .toString()
+                        .split("")
+                        .map((char) => parseInt(char))
+                        .reverse()
+                        .reduce((sum, digit, i) => {
+                            const mul = Math.pow(10, i);
+                
+                            sum += Math.floor(n / (mul * 10)) * mul;
+                
+                            if (digit > 1) {
+                                sum += mul;
+                            } else if (digit === 1) {
+                                sum += (n % mul) + 1;
+                            }
+                
+                            return sum;
+                        }, 0);
+                }
+            </code>
+            </pre>
+    </div>
+
+    <div>
+        <p>Here are some examples:</p>
+    </div>
+    <div>
+        <pre>
+            <code>
+                console.log(numberOfOnes(14));  <span class="opac"> // 7</span>  
+                console.log(numberOfOnes(236));  <span class="opac"> // 7</span> 
+                console.log(numberOfOnes(420));   <span class="opac"> // 192</span> 
+                console.log(numberOfOnes(1337));  <span class="opac"> // 812</span> 
+                console.log(numberOfOnes(65536)); <span class="opac"> // 36714</span> 
+            </code>
+            </pre>
+    </div>
+
+
+
+<div>
+    <p>Play around with the code <a href="https://codepen.io/dodov/pen/poLLNwy?editors=0012">on CodePen!</a></p>
+
+       <p>Also, make sure to subscribe to <a href="https://cassidoo.co/newsletter/">rendezvous with cassidoo</a> for similar puzzles and useful web development content.
+        
+        </p>
+</div>
+
+
+
+
+
+
+
+
+                    <script>
+
+                    </script>
+</body>
+
+</html>

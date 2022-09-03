@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't build your own framework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dont-container">
+
+
+        <nav class="nav-link">
+            <div class="navLink"><a href="">home</a></div>
+            <div class="navLinkBlog"><a href="">blog</a></div>
+            <div class="navLink"><a href="">projects</a></div>
+        </nav>
+        <div class="dont-content-container">
+            <div class="left-bar">
+                <div class="left-num"><span>1</span></div>
+                <div><span>2</span></div>
+                <div><span>3</span></div>
+                <div><span>4</span></div>
+                <div><span>5</span></div>
+                <div><span>6</span></div>
+                <div><span>7</span></div>
+                <div><span>8</span></div>
+                <div><span>9</span></div>
+                <div><span>10</span></div>
+                <div><span>11</span></div>
+                <div><span>12</span></div>
+                <div><span>13</span></div>
+                <div><span>14</span></div>
+                <div><span>15</span></div>
+                <div><span>16</span></div>
+                <div><span>17</span></div>
+                <div><span>18</span></div>
+                <div><span>19</span></div>
+                <div><span>20</span></div>
+                <div><span>21</span></div>
+                <div><span>22</span></div>
+                <div><span>23</span></div>
+                <div><span>24</span></div>
+                <div><span>25</span></div>
+                <div><span>26</span></div>
+                <div><span>27</span></div>
+                <div><span>28</span></div>
+                <div><span>29</span></div>
+                <div><span>30</span></div>
+                <div><span>31</span></div>
+                <div><span>32</span></div>
+                <div><span>33</span></div>
+                <div><span>34</span></div>
+                <div><span>35</span></div>
+                <div><span>36</span></div>
+                <div><span>37</span></div>
+                <div><span>38</span></div>
+                <div><span>39</span></div>
+                <div><span>40</span></div>
+                <div><span>41</span></div>
+                <div><span>1</span></div>
+                <div><span>2</span></div>
+
+            </div>
+            <div class="right-bar">
+
+
+                <section>
+                    <div class="ones">
+                        <div class="build">
+                            <h1 class="dont-h">Don't Build Your Own Framework</h1>
+                            <p class="delus">Delusions of having the ability to solve something once and for all.</p>
+                        </div>
+
+                        <div class="time-div">
+                            <p class="time-dont">19 Jun 2022</p>
+                            <p class="time-dont">197 lines</p>
+                        </div>
+                    </div>
+                    <img class="dont-img" src="img/dont-build.png" style="width:640px; height:360px;">
+                    <div>
+                        <p class="web"> In 2019, I wanted to create a website that closely followed our custom design
+                             and had smooth animations and interactions. I looked at<a> UIkit</a>, but I didn't pick it 
+                             for two reasons:</a></p>
+
+                       
+                    </div>
+<div class="hyp-div">
+    <p><span class="hyp">-</span> It had its own opinion on design</p>
+
+    <p><span class="hyp">-</span>  It didn't meet my requirements for "smoothness"</p> 
+</div>
+   
+
+
+
+
+                    <div class="lead">
+                        <p class="">
+                            This lead me to search for other frameworks that, unlike UIkit, provide just the basic JavaScript functionality, allowing you to style and animate as you wish. I didn't find anything. So, naturally, I decided to make <a>my own thing.</a>
+
+                            
+                        </p>
+                    </div>
+
+                 
+
+                    <p class="devel">I was developing the framework in parallel with the website I was working on and it was wonderful. I was able to make the code just right and implement just the features I need. I took some inspiration from UIkit, but stuck to my
+                     main idea.</p>
+                    <p class="late">Later, I noticed that things weren't very efficient, so I decided to refactor. But because I was developing that framework and simultaneously using it, I had to rework not only the framework, but the website as well. Apart from that, I was trying to make this work for as many use cases as I could. What if you use React? What if you don't? What if you use jQuery? What if you don't even know JavaScript that much?</p>
+ 
+                 
+                    <div class="notice">
+                        <p>Notice how we can just take the last digit off the number and get the number of times 1 will
+                            appear at the units position. For example, if we have 236, we can take the 6 out and know
+                            that 1 will surely appear 23 times as a units digit. In this case, however, we must add one,
+                            because 231 is also part of the collection. If the end number was 230, we wouldn't have
+                            that.</p>
+                        <p>At this point, my enthusiasm slowly started to fade away. Without realizing it, I had put myself in a position where I wanted to solve problems that don't yet exist and solve them perfectly. But I still believed that in the end, it'd be "worth it".</p>
+                    </div>
+
+                  
+
+                   
+                        <p>At this point, my enthusiasm slowly started to fade away. Without realizing it, I had put myself in a position where I wanted to solve problems that don't yet exist and solve them perfectly. But I still believed that in the end, it'd be "worth it".</p>
+                        <p>Then, our team started to grow. I was no longer the only one working on that website. Since it used my framework, I had to onboard new people with it. This meant that I had to write up a README, then documentation, example usage, etc. Despite that, we still had to clear up some stuff in Slack.
+                        </p>
+                  
+
+                    
+  
+                        <p>Because our team grew, so did our workload. This caused work on the framework in parallel with the website to transition in work on the framework during the weekends and early mornings.</p>
+                        
+                        <p>I carried on, though. I had (and to this point, still have) the habit of abandoning projects, so I was determined to at least boil the framework down to small organized JavaScript snippets that you could download via npm. But do I use Custom Elements or even go simpler than that and use just ES6 classes?
+                        </p>
+                  
+
+
+                    
+                        <p>Recently, I started getting more and more into the React ecosystem. Late to the party, I know. I also started noticing more websites with <div id="__next"> or __nuxt or ___gatsby. So no matter how I build my framework, it wouldn't work with the way most people build for the web. Since I want to start using these tools as well, my framework won't work for me either.</p>
+                        <p>Unrelated to this, I had slowly started to pay more attention to my health and well-being. I changed my eating and sleeping habits, started to exercise and stretch more, I even started reading books… This made the weekends and early mornings much more packed and valuable.</p>
+                        <p>And now I'm here. I had made something that nobody really uses, but still represents a solid part of our workflow. What do I do? Well, I think I've learned some lessons in the past 3 years.</p>
+                    
+
+
+
+                   
+                        <p>All that's left now is to apply the multiplier to those numbers and we get the number of
+                            complete cycles with a 1 that each digit goes through:</p>
+              <h2>Code Doesn't Matter</h2>
+
+
+
+
+                   
+                        <p>Unless you're building software for aircraft or medical equipment, nobody really cares about your code, and neither should you. Especially in web development. At the end of the day, you want a bunch of boxes with text and images in them. You can have a hellish codebase and still get the job done. A perfect codebase doesn't exist. At least not for a very long time, in large projects, or with many people involved. Things will get messy and you should be ready to accept that.</p>
+                   
+
+                    
+
+
+    <p>Now, we have to handle cases where the digit is greater than 1. That's when we have one extra cycle:</p>
+<h2>Maintenance Is a Burden</h2>
+
+
+
+    <p>Let's say you've built something and it works perfectly. That won't last long. Bugs will appear, new people will join and documentation will be needed, features will be requested. Who's going to handle that? If you're doing this as a side project, are you prepared to be distracted by these things while working? If not, are you prepared to do them in your free time?</p>
+
+
+
+
+
+<p>Even if people start contributing with pull requests and taking some of that load off of you, you'll still have to review and approve of what's going on.</p>
+    
+ <h2>Third-Party Is Fine</h2>
+
+
+  
+        <p>If you find someone else who has done the work for you, use it. There might be things that you don't like,
+             but compared to the hidden costs of maintaining something yourself, they won't matter. 
+             If that third-party code has been out for a long time, chances are that most common bugs and edge cases
+              would have already been handled. Doing things yourself should be your last resort, because you'll slowly 
+              discover the same issues as well and waste time on solved problems.</p>
+              
+              <h2>Launch Early</h2>
+
+
+    
+  
+        <p>On the off-chance that you really want or have to build something, launch it as soon as you can. As David Heinemeier Hansson said on <a>episode "Launch Now" of the Rework podcast:</a></p> 
+   
+   
+<div>
+    <p>So we need to extend our if statement:</p> 
+</div>
+
+
+    <div>
+        <pre>
+            <code>
+                > If you're not uncomfortable by the time you're launching,
+                > it's way too late.
+            </code>
+            </pre>
+    </div>
+
+
+    <p>I never really launched my side project. It wasn't "ready". At the same time, it became a bigger and bigger dependency in our main projects. That's an issue, because you're building on top of something that isn't validated by other people. If I had shared it, maybe people would have helped out and given ideas for improvements. Or, maybe people would have critiqued it and made me question whether it's valuable.</p>
+<p>And that's what I was most afraid of — that the project isn't valuable. But no matter how much effort you put into something, you still can't know for sure if it's valuable until other people give their own points of view. That's why it's better to launch as soon as possible:</p>
+
+
+    <p>- If you've built something valuable, you'll get more like-minded people to help you out with it</p>
+<p>- If you've built something pointless, you'll save time and probably learn about new and better approaches</p>
+
+<h2>Conclusion</h2>
+    
+
+    
+        <p>I will archive my project. These problems have already been solved by many people, many times.
+             We all know that <a>every day, a new JavaScript framework is born.</a> This happens because people like me
+              think they've got the silver bullet and can solve a certain problem once and for all.
+               But that's impossible and delusional. It's like that <a>xkcd comic about standards:</a></p>
+    <!-- <img src="img/dont-build.png"> -->
+
+
+
+    <p>We should work on solving new problems, not existing ones. If you find an issue with someone else's code, report it or directly submit a pull request and fix it. Not just for yourself, but for everybody else! Your contributions will be nicely welcomed! Don't create something new with its own set of problems.</p>
+
+       <p>It's impossible to build something entirely by yourself. At some point, your "pristine" code will 
+        
+        
+        have to interact with other people's "messy" code. Sure, you might not use third-party code on your website,
+         but its existence still depends on it. The operating system it runs on is not built by you.
+          The browser that your viewers use to see it is not built by you. The protocols that carry your data across
+           the wire are not designed by you.</p>
+
+       <p> You will always depend on other people's work. Embrace that!
+        </p>
+
+
+
+
+
+
+
+
+
+                    <script>
+
+                    </script>
+</body>
+
+</html>

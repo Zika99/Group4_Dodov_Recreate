@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -6,26 +8,291 @@
 body{
 width:100%;
 background: #1e1f1c;
+font-family: 'Fira Code', monospace;
+/* margin: 0 auto; */
 }
-.nav-link{
-    
-    background: #1e1f1c;
+p{
+    color: #f8f8f2;
+    font-size: 16px;
+}
+h1,h2,h3,h4{
+    color: #ffffff;
+}
+.hri{
+    font-size: 18px;
 }
 
+
+.nav-link{
+    background-color: #1e1f1c;
+    display: inline-flex;
+    width:100%;
+    padding-top: 70px;
+}
+div.container nav.nav-link div.navLinkBlog {
+    background-color: #272822;
+}
+div.container nav .navLink a, div.container nav.nav-link div.navLinkBlog a {
+    text-decoration: none;
+    color: #C6C6C5;
+}
+div.container nav.nav-link div.navLink, div.container nav.nav-link div.navLinkBlog {
+    width: 15%;
+    padding: 8px 10px 8px 10px;
+    margin-right: 1px;
+}
+div.container nav.nav-link div.navLink {
+    background-color:#34352F ;
+}
+
+.ho{
+    color: #eee; 
+}
+.ho-btn{
+    background: #272822;
+    border: none;
+    padding: 10px 40px;
+}
+ 
+.oblik{
+    color: #a6e22e;
+}
+.oblik:hover{
+    color: #4e94ce;
+}
 .container{
     max-width: 797px;
-    height: 1776px;
-       background: #272822;
-       fill: #f8f8f2;
+    /* height: 1776px; */
+    background: #272822;
+    
+ justify-content: center;
+ align-items: center;
     margin: auto;
 }
     
 .content-container{
-    background-color: orange;
+
     display: flex;
+    margin-left: 30px;
 }
 .left-bar{
-    background-color: green;
+    
     display: flex;
     flex-direction: column;
+    line-height: 1.5em;
+    color: #90908a;
+}
+.first-cont{
+    display: flex;
+    padding-top: 40px;
+}
+.left-num{
+    padding-top: 40px;
+}
+.pass{
+    padding-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 80%;
+    line-height: 1.5em;
+}
+.late{
+    padding-top: 25px;
+}
+
+.first-sec{
+    display: flex;
+    margin-top: 20px;
+}
+
+.firsts-sec{
+    display: flex;
+    margin-top: 23px;
+}
+.numb{
+ text-decoration: none;
+ list-style: none;
+}
+.auth-cont{
+    margin-left: 20px;
+}
+.right-bar{
+    margin-left: 20px;
+}
+.sec-cont{
+    margin-left: 20px;
+}
+.p-sec{
+    font-size: 16px;
+    padding-top: 3px;
+    font-weight: 500;
+}
+.date{
+    font-size: 13px;
+    padding-top: 25px;
+}
+.date-b{
+    font-size: 13px;
+    padding-top: 5px;
+}
+.num:active{
+    
+}
+.num-head{
+    display: flex;
+}
+.read{
+    padding-top: 26px;
+}
+
+/* style for no of ones page */
+.ones{
+    display: flex;
+    padding-top: 40px;
+    
+}
+.of{
+    display: flex;
+    flex-direction: column;
+}
+.ofone{
+    padding-bottom: 5px;
+}
+.time{
+    /* margin-left: 130px; */
+    /* display: flex; */
+    justify-content: right;
+}
+.cover{
+    margin-top: 13px;
+}
+.in{
+    width: 90%;
+    padding-top: 22px;
+    line-height: 1.5em;
+}
+a{
+    color: #a6e22e;
+    cursor: pointer;
+
+}
+a:hover{
+    color:#4e94ce;
+}
+.task{
+    padding-top: 24px;
+}
+.bloc{
+    padding-top: 26px;
+    line-height: 1.5em;
+    color: #88846F;
+}
+.blop{
+    color: #88846F; 
+}
+.perh{
+    width: 85%;
+}
+.per{
+    padding-top: 26px;
+    line-height: 1.5em; 
+}
+.ide{
+    padding-top: 40px;
+}
+.let{
+    width: 88%;
+    padding-top: 22px;
+    line-height: 1.5em; 
+
+}
+.now{
+    width: 90%;
+    padding-top: 22px;
+    line-height: 1.5em; 
+}
+code{
+    color: #CFCFC2;
+    font-size: 16px;
+    font-weight: 400;
+    background: #22231e;
+
+line-height: 24px;
+
+
+}
+.code{
+
+}
+.opac{
+    color: #88846f;
+}
+/* style for dont-build page */
+.dont-container{
+    max-width: 797px;
+    /* height: 1776px; */
+    background: #272822;
+    
+ justify-content: center;
+ align-items: center;
+    margin: auto;
+}
+    
+.dont-content-container{
+
+    display: flex;
+    margin-left: 30px;
+}
+.web{
+    width: 90%;
+    padding-top: 53px;
+    line-height: 1.5em;
+}
+.dont-h{
+    line-height: 1em;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.time-div{
+    padding-right: 95px;
+    white-space: nowrap;
+}
+.time-dont{
+    font-size: 13px;
+    font-weight: 400;
+     color:
+    #CFCFC2; 
+     
+    
+}
+.delus{
+    width: 70%;
+}
+.dont-img{
+    padding-top: 25px;
+}
+.hyp{
+    color: #a6e22e;
+}
+.hyp-div{
+    padding-top: 25px;
+    line-height: 1.5em;
+}
+.lead{
+    width: 90%;
+    padding-top: 24px;
+    line-height: 1.5em;
+}
+.devel{
+padding-top: 24px;
+line-height: 1.5em;
+}
+.late{
+width:89%;
+}
+.notice{
+    width: 90%;
+    padding-top: 24px;
+line-height: 1.5em;
 }
