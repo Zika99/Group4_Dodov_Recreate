@@ -14,7 +14,6 @@ background: #1e1f1c;
 }
 .container{
     max-width: 797px;
-    min-width: 300px;
     height: 1776px;
     background: #272822;
     margin: auto;
@@ -53,7 +52,9 @@ div.container nav.nav-link div.navLink {
     padding: 3px 20px 3px 35px;
     text-align: right;
 }
-
+.more {
+    visibility: hidden;
+}
 
 /* ----------------------------For imgs and writeups----------------------------------------------------- */
 .heading {
@@ -79,7 +80,7 @@ div.container nav.nav-link div.navLink {
     width: 100%;
 }
 .blogImgs {
-    width: 24.5%;
+    width: 160px;
     margin-right: 15px;
 }
 .blogWriteUp {
@@ -120,7 +121,13 @@ div.container nav.nav-link div.navLink {
     color: RGB(78, 148, 206);
     border-bottom: 2px solid RGB(78, 148, 206);
 }
-.page-mode a{
+.socials li {
+    display:inline-flex;
+}
+.bullet-point {
+    color:#D9D9D4;
+}
+.page-mode a {
     font-size: 18px;
     color: #D9D9D4;
     font-weight: bold;
@@ -130,4 +137,43 @@ div.container nav.nav-link div.navLink {
 }
 .symbol {
     color: #90BC39;
+}
+/* -------------------------------------------------Screen Size 723px to 617px ---------------------------------------- */
+@media (max-width: 723px) and (min-width: 617px) {
+    .a_line::after {
+        content: "------------------------------------------------------";
+    }
+    .footer-links {
+            gap: 50px; 
+    }
+}
+/* ------------------------------------------------Screen Size 616px to 460px------------------------------------------ */
+@media (max-width: 616px) and (min-width:460px) {
+    .nav-link {
+        padding-top: 0%;
+    }
+    .imgAndWriteUp {
+        display: block;
+    }
+    .blogImgs {
+        width: 300px;
+    }
+    .eachNumber {
+        padding: 3px 20px 3px 15px;
+    }
+    .a_line::after {
+        content: "-------------------------------------------";
+    }
+    .more {
+        visibility: visible;
+    }
+    .container {
+        height: 2000px;
+    }
+    .socials li, .footer-links {
+        display: block;
+    }
+    .bullet-point {
+        visibility: hidden;
+    }
 }
