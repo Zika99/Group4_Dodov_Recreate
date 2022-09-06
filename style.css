@@ -145,6 +145,48 @@ div.container nav.nav-link div.navLink {
     padding-top: 26px;
 }
 
+/* ----------------For the footer------------------------------------------------------ */
+.a_line {
+    border: none;
+    margin-top: 28px;
+}
+.a_line::before {
+    content: "//";
+    color: #72736C;
+    margin-left: 10px;
+}
+.a_line::after {
+    content: "----------------------------------------------------------------------";
+    color: #72736C;
+}
+.footer-links {
+    display: inline-flex;
+    gap: 150px;
+    margin-top: 28px;
+    margin-left: 5px;
+}
+.socials a {
+    border-bottom: 2px solid #90BC39;
+    color: #90BC39;
+    font-size: 18px;
+}
+.socials a:hover {
+    color: RGB(78, 148, 206);
+    border-bottom: 2px solid RGB(78, 148, 206);
+}
+.page-mode a{
+    font-size: 18px;
+    color: #D9D9D4;
+    font-weight: bold;
+}
+.mono:hover, .symbol:hover {
+    color: RGB(78, 148, 206);
+}
+.symbol {
+    color: #90BC39;
+}
+
+
 /* style for no of ones page */
 .ones{
     display: flex;
@@ -221,8 +263,17 @@ line-height: 24px;
 
 
 }
-.code{
-
+.pink{
+color: #f92672 ;
+}
+.blue{
+color: #66d9ef;
+}
+.purple{
+color: #ae81ff;
+}
+.orange{
+    color: #fd971f;
 }
 .opac{
     color: #88846f;
@@ -295,4 +346,9 @@ width:89%;
     width: 90%;
     padding-top: 24px;
 line-height: 1.5em;
+}
+.point{
+    width: 90%;
+    padding-top: 24px;
+    line-height: 1.5em; 
 }
