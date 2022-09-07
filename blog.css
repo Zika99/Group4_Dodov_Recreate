@@ -33,7 +33,7 @@ div.container nav .navLink a, div.container nav.nav-link div.navLinkBlog a {
     color: #C6C6C5;
 }
 div.container nav.nav-link div.navLink, div.container nav.nav-link div.navLinkBlog {
-    width: 15%;
+    width: 100px;
     padding: 8px 10px 8px 10px;
     margin-right: 1px;
 }    
@@ -132,37 +132,48 @@ div.container nav.nav-link div.navLink {
     color: #D9D9D4;
     font-weight: bold;
 }
-.mono:hover, .symbol:hover {
+select:hover {
     color: RGB(78, 148, 206);
 }
-.symbol {
-    color: #90BC39;
+select {
+    margin-top: 5px;
+    background:none;
+    color: #DCDCD5;
+    font-size: 15px;
+    border: none;
+    -webkit-appearance: none;
 }
-/* -------------------------------------------------Screen Size 723px to 617px ---------------------------------------- */
-@media (max-width: 723px) and (min-width: 617px) {
+option {
+    background-color: #272822;
+    color: #D9D9D4;
+}
+/* -------------------------Screen Size 723px to 625px ---------------------------------------- */
+@media (max-width: 735px) and (min-width: 631px) {
     .a_line::after {
-        content: "------------------------------------------------------";
+        content: "--------------------------------------------------------";
     }
     .footer-links {
             gap: 50px; 
     }
 }
-/* ------------------------------------------------Screen Size 616px to 460px------------------------------------------ */
-@media (max-width: 616px) and (min-width:460px) {
+/* --------------------------Screen Size 624px to 460px------------------------------------------ */
+@media (max-width: 630px) and (min-width:200px) {
     .nav-link {
         padding-top: 0%;
     }
     .imgAndWriteUp {
         display: block;
+        margin-bottom: 20px;
     }
     .blogImgs {
         width: 300px;
     }
     .eachNumber {
         padding: 3px 20px 3px 15px;
+        font-size: 15px;
     }
     .a_line::after {
-        content: "-------------------------------------------";
+        content: "------------------------------------------";
     }
     .more {
         visibility: visible;
@@ -173,7 +184,41 @@ div.container nav.nav-link div.navLink {
     .socials li, .footer-links {
         display: block;
     }
+    .socials li {
+        line-height: 0.3;
+    }
     .bullet-point {
         visibility: hidden;
+    }
+    .heading h1, .blogWriteUp h1 a {
+        font-size: 18px;
+    }
+    .paragraphs p {
+        font-size: 15px;
+    }
+    .blogWriteUp {
+        width: 300px;
+        margin-top: 15px;
+    }
+    .a_line {
+        margin-top: 2px;
+    }
+    #color-mode {
+        margin-top: 15px;
+    }
+    .socials a {
+        font-size: 15px;
+    }
+    .mode-div {
+        margin-top: 20px;
+    }
+}
+/* --------------------------Screen Size 459px to 200px------------------------------------------------ */
+@media (max-width: 459px) and (min-width:200px) {
+    .a_line::after {
+        content: "--------------------------------";
+    }
+    .container {
+        width: fit-content;
     }
 }
