@@ -83,10 +83,11 @@
                     </div>
                     <img class="cover" src="img/number-of-ones-cover.png" style="width:640px; height:360px;">
                     <div>
-                        <p class="in"> In this post, I'll explain my solution to the programming puzzle from <a>the latest issue
+                        <p class="in"> In this post, I'll explain my solution to the programming puzzle from <a href="https://buttondown.email/cassidoo/archive/science-is-not-a-boys-game-its-not-a-girls-game/">the
+                                latest issue
                             </a>
 
-                            of <a>@cassidoo's newsletter.</a></p>
+                            of <a href="https://twitter.com/cassidoo">@cassidoo's newsletter.</a></p>
 
                         <p class="task">The task is simple:</p>
                     </div>
@@ -104,15 +105,17 @@
                             and count the digits. But the larger the input number, the slower it gets. So, rather than
                             counting, we can calculate the result.
 
-                            
+
                         </p>
                     </div>
 
                     <h2 class="ide">Idea</h2>
 
-                    <p class="let">Let's start with the number of times that the digit 1 appears in the 0-9 range. It's just one.
+                    <p class="let">Let's start with the number of times that the digit 1 appears in the 0-9 range. It's
+                        just one.
                         The number 1.</p>
-                    <p class="now">Now, let's try 0-99. Here we have the same thing, with the difference being that it's repeated 10
+                    <p class="now">Now, let's try 0-99. Here we have the same thing, with the difference being that it's
+                        repeated 10
                         times:</p>
 
                     <div class="code">
@@ -202,8 +205,8 @@
                     <div>
                         <pre>
                             <code>
-                                [6, 3, 2].forEach((digit, i) => {
-                                    let mul = Math.pow(10, i); <span class="opac">// 1, 10, 100</span>
+                                [6, 3, 2].<span class="blue">forEach</span>((digit, i) <span class="pink">=></span> {
+                                   <span class="pink"> let</span> mul <span class="pink"> =</span> Math.<span class="blue">pow</span>(10, i); <span class="opac">// 1, 10, 100</span>
                                 });
                             </code>
                         </pre>
@@ -211,10 +214,14 @@
 
                     <div>
                         <p>Now, we have to be able to take digits out of the number. In our first iteration, for the
-                            units, we have to take 23 out of<code>236</code> . We can do that by dividing the number by 10, getting
-                            <code>23.6</code>. We can then round it down with <code>Math.floor()</code> to get <code>23</code>.</p>
-                        <p>For the tens, we have to get 2 out of <code>236</code>. We can do that by dividing by <code>100</code>, getting 2.36,
-                            and rounding down to <code>2</code>.</p>
+                            units, we have to take 23 out of<code class="orange">236</code> . We can do that by dividing the number by
+                            10, getting
+                            <code class="orange">23.6</code>. We can then round it down with <code class="orange">Math.floor()</code> to get
+                            <code class="orange">23</code>.
+                        </p>
+                        <p>For the tens, we have to get 2 out of <code>236</code>. We can do that by dividing by
+                            <code class="orange">100</code>, getting 2.36,
+                            and rounding down to <code class="orange">2</code>.</p>
                         <p>Basically, we multiply our multiplier by 10, divide, then floor, and we have successfully
                             taken out the necessary digits:</p>
                     </div>
@@ -256,18 +263,19 @@
                     <div>
                         <pre>
         <code>
-            let cycles = Math.floor(n / (mul * 10));
-            let ones = cycles * mul;
+            <span class="pink"> let</span> cycles <span class="pink"> =</span>  Math.floor(n <span class="pink"> /</span> (mul <span class="pink"> *</span><span class="purple">10</span>));
+            <span class="pink"> let</span>  ones <span class="pink"> =</span>  cycles <span class="pink">* </span>  mul;
         </code>
     </pre>
                     </div>
 
-<div>
-    <p>Now, we have to handle cases where the digit is greater than 1. That's when we have one extra cycle:</p>
-</div>
+                    <div>
+                        <p>Now, we have to handle cases where the digit is greater than 1. That's when we have one extra
+                            cycle:</p>
+                    </div>
 
-<div>
-    <pre>
+                    <div>
+                        <pre>
 <code>
     236
     └─ 3 > 1 => extra cycle (210-219)
@@ -276,34 +284,35 @@
     └─ 0 < 1 => no extra cycle (we don't reach 210)
 </code>
 </pre>
-</div>
+                    </div>
 
-<div>
-    <p>We add an extra <code>if</code> statement:</p>
-</div>
+                    <div>
+                        <p>We add an extra <code class="orange">if</code> statement:</p>
+                    </div>
 
 
-<div>
-    <pre>
+                    <div>
+                        <pre>
 <code>
-    let cycles = Math.floor(n / (mul * 10));
-    let ones = cycles * mul;
+    <span class="pink"> let</span>  cycles <span class="pink"> =</span>  Math.floor(n <span class="pink"> /</span>  (mul <span class="pink"> *</span>  10));
+    <span class="pink"> let</span>  ones<span class="pink"> =</span>  cycles * mul;
     
-    if (digit > 1) {
-        ones += mul; <span class="opac">// add one extra cycle</span>
+    <span class="pink"> if</span>  (digit <span class="pink"> ></span>  1) {
+        ones <span class="pink"> +=</span>  mul; <span class="opac">// add one extra cycle</span>
     }
 </code>
 </pre>
-</div>
+                    </div>
 
-<div>
-<p>Finally, we have the edge case where the digit is exactly 1.
-     This is where we have an incomplete cycle and the result depends on the digits to the right:</p>
-    </div>
+                    <div>
+                        <p>Finally, we have the edge case where the digit is exactly 1.
+                            This is where we have an incomplete cycle and the result depends on the digits to the right:
+                        </p>
+                    </div>
 
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
     <code>
         216
         └─ just 10-16, not 10-19, so we extract 6
@@ -312,166 +321,181 @@
        └── just 100-136, not 100-199, so we extract 36
     </code>
     </pre>
-    </div>
+                    </div>
 
-    <div>
-        <p>We can get digits on the right by applying<code>%</code>, the <a>remainder operator</a>, to the number and the multiplier:</p>
-    </div>
+                    <div>
+                        <p>We can get digits on the right by applying<code class="orange"> %</code>, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">remainder
+                                operator</a>, to the number and the multiplier:</p>
+                    </div>
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
             <code>
                 216 % 10  = divide by 10 and get the remainder  => 6
                 136 % 100 = divide by 100 and get the remainder => 36
             </code>
             </pre>
-    </div>
+                    </div>
 
 
-    <div>
-        <p>However, we must add 1 to that remainder, because we need to count the 0 as well. In other words, for the tens, we have:</p>
-    </div>
+                    <div>
+                        <p>However, we must add 1 to that remainder, because we need to count the 0 as well. In other
+                            words, for the tens, we have:</p>
+                    </div>
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
             <code>
                 216 % 10  = divide by 10 and get the remainder  => 6
                 136 % 100 = divide by 100 and get the remainder => 36
             </code>
             </pre>
-    </div>
+                    </div>
 
-    
-    <div>
-        <p>So we need to extend our if statement:</p> 
-    </div>
-    
 
-    <div>
-        <pre>
+                    <div>
+                        <p>So we need to extend our if statement:</p>
+                    </div>
+
+
+                    <div>
+                        <pre>
             <code>
                 210, 211, 212, 213, 214, 215, 216 => 7 numbers in total
                 └┴───────────────────────────────── this counts as well
             </code>
             </pre>
-    </div>
+                    </div>
 
-<div>
-    <p>So we need to extend our if statement:</p> 
-</div>
+                    <div>
+                        <p>So we need to extend our if statement:</p>
+                    </div>
 
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
             <code>
-                if (digit > 1) {
-                    ones += mul; <span class="opac">// add one extra cycle</span>
-                } else if (digit === 1) {
-                    ones += (n % mul) + 1; <span class="opac">// incomplete cycle</span>
+                <span class="pink"> if</span> (digit <span class="pink"> ></span><span class="purple"> 1</span>) {
+                    ones <span class="pink"> +=</span>  mul; <span class="opac">// add one extra cycle</span>
+                } <span class="pink"> else if</span> else if (digit  <span class="pink"> ===</span><span class="purple"> 1</span>) {
+                    ones<span class="pink"> +=</span> (n<span class="pink"> %</span> mul)<span class="pink"> +</span> 1; <span class="opac">// incomplete cycle</span>
                 }
             </code>
             </pre>
-    </div>
+                    </div>
 
-<div>
-    <p>Put together, our logic looks like this:</p>
-</div>
+                    <div>
+                        <p>Put together, our logic looks like this:</p>
+                    </div>
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
             <code>
-                let n = 236;
-                let strings = n.toString().split("");     <span class="opac">// ["2", "3", "6"]</span> 
-                let ints = strings.map((s) => parseInt(s)); <span class="opac">// [2, 3, 6]</span>
-                let digits = ints.reverse();                <span class="opac">// [6, 3, 2]</span>
-                let sum = 0;
+                <span class="pink">let</span> n <span class="pink">=</span> <span class="purple">236</span>;
+                <span class="pink">let</span> strings <span class="pink">=</span> n. <span class="blue">toString</span>().<span class="blue">split</span>split("");     <span class="opac">// ["2", "3", "6"]</span> 
+                <span class="pink">let</span> ints <span class="pink">=</span> strings.<span class="blue">map</span>((s)  <span class="pink">=></span> <span class="blue">parseInt</span>(s)); <span class="opac">// [2, 3, 6]</span>
+                <span class="pink">let</span> digits <span class="pink">=</span> ints.<span class="blue">reverse</span>();                <span class="opac">// [6, 3, 2]</span>
+                <span class="pink">let</span> sum  <span class="pink">=</span> <span class="purple">0</span>;
                 
-                digits.forEach((digit, i) => {
-                    let mul = Math.pow(10, i);
-                    let cycles = Math.floor(n / (mul * 10));
-                    let ones = cycles * mul;
+                digits. <span class="blue">forEach</span>((digit, i) <span class="pink">=></span> {
+                    <span class="pink">let</span> mul  <span class="pink">=</span> Math.<span class="blue">pow</span>(<span class="purple">10</span>, i);
+                    <span class="pink">let</span> cycles <span class="pink">=</span> Math.<span class="blue">floor</span>(n / (mul <span class="pink">*</span> 10));
+                    <span class="pink">let</span> ones <span class="pink">= </span>cycles<span class="pink"> *</span> mul;
                 
-                    if (digit > 1) {
-                        ones += mul; // add one extra cycle
-                    } else if (digit === 1) {
-                        ones += (n % mul) + 1; <span class="opac">// incomplete cycle</span>
+                    if (digit > <span class="purple">1</span>) {
+                        ones  <span class="pink">+=</span> mul; // add one extra cycle
+                    }  <span class="pink">else if</span> (digit  <span class="pink">===</span> <span class="purple">1</span>) {
+                        ones  <span class="pink">+= </span> (n <span class="pink">%</span> mul)  <span class="pink">+</span> <span class="purple">1</span>; <span class="opac">// incomplete cycle</span>
                     }
                 
-                    sum += ones;
+                    sum <span class="pink">+= </span> ones;
                 });
                 
                 console.log(sum); <span class="opac">// 154</span>
             </code>
             </pre>
-    </div>
+                    </div>
 
-<div>
-    <p>Now, we can wrap that logic in an easily reusable function and use <code>reduce()</code> to accumulate the sum:</p>
-</div>
+                    <div>
+                        <p>Now, we can wrap that logic in an easily reusable function and use <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"><code class="orange">reduce()</code></a>
+                            to accumulate the sum:</p>
+                    </div>
 
 
-    <div>
-        <pre>
+                    <div>
+                        <pre>
             <code>
-                function numberOfOnes(n) {
-                    return n
-                        .toString()
-                        .split("")
-                        .map((char) => parseInt(char))
-                        .reverse()
-                        .reduce((sum, digit, i) => {
-                            const mul = Math.pow(10, i);
+                <span class="pink">function </span> numberOfOnes(n) {
+                    <span class="pink">return </span> n
+                    <span class="blue">.toString</span>()
+                    <span class="blue">.split</span>("")
+                    <span class="blue">.map</span>((char)  <span class="pink">function </span><span class="pink">=></span><span class="blue">parseInt</span>(char))
+                    <span class="blue">.reverse</span>()
+                    <span class="blue">.reduce</span>((sum, digit, i) <span class="pink">function </span> <span class="pink">=></span> {
+                        <span class="pink"> const</span> mul  <span class="pink">function </span>= Math.<span class="blue">pow</span>(<span class="purple">10</span>, i);
                 
-                            sum += Math.floor(n / (mul * 10)) * mul;
+                            sum <span class="pink">function </span>+= Math.floor(n <span class="pink">function</span>/ (mul<span class="pink"> * </span><span class="blue">10</span>))<span class="pink">* </span> mul;
                 
-                            if (digit > 1) {
-                                sum += mul;
-                            } else if (digit === 1) {
-                                sum += (n % mul) + 1;
+                            <span class="pink"> if</span>  (digit<span class="pink"> > </span><span class="purple">1</span> ) {
+                                sum  <span class="pink">+= </span> mul;
+                            }     <span class="pink">else if</span> (digit  <span class="pink">=== </span><span class="purple">1</span> ) {
+                                sum  <span class="pink">+= </span> (n <span class="pink">%</span> mul)  <span class="pink">+ </span><span class="blue">parseInt</span> 1;
                             }
                 
-                            return sum;
-                        }, 0);
+                            <span class="pink"> return</span> sum;
+                        }, <span class="purple">0</span>);
                 }
             </code>
             </pre>
-    </div>
+                    </div>
 
-    <div>
-        <p>Here are some examples:</p>
-    </div>
-    <div>
-        <pre>
+                    <div>
+                        <p>Here are some examples:</p>
+                    </div>
+                    <div>
+                        <pre>
             <code>
-                console.log(numberOfOnes(14));  <span class="opac"> // 7</span>  
-                console.log(numberOfOnes(236));  <span class="opac"> // 7</span> 
-                console.log(numberOfOnes(420));   <span class="opac"> // 192</span> 
-                console.log(numberOfOnes(1337));  <span class="opac"> // 812</span> 
-                console.log(numberOfOnes(65536)); <span class="opac"> // 36714</span> 
+                console.<span class="blue">log</span>( <span class="blue">numberOfOnes</span>(<span class="blue">14</span>));  <span class="opac"> // 7</span>  
+                console.<span class="blue">log</span>( <span class="blue">numberOfOnes</span>(<span class="blue">236</span>));   <span class="opac"> // 7</span> 
+                console.<span class="blue">log</span>( <span class="blue">numberOfOnes</span>(<span class="blue">420</span>));    <span class="opac"> // 192</span> 
+                console.<span class="blue">log</span>( <span class="blue">numberOfOnes</span>(<span class="blue">1337</span>));  <span class="opac"> // 812</span> 
+                console.<span class="blue">log</span>( <span class="blue">numberOfOnes</span>(<span class="blue">65536</span>));  <span class="opac"> // 36714</span> 
             </code>
             </pre>
-    </div>
+                    </div>
 
 
 
-<div>
-    <p>Play around with the code <a href="https://codepen.io/dodov/pen/poLLNwy?editors=0012">on CodePen!</a></p>
+                    <div>
+                        <p>Play around with the code <a href="https://codepen.io/dodov/pen/poLLNwy?editors=0012">on
+                                CodePen!</a></p>
 
-       <p>Also, make sure to subscribe to <a href="https://cassidoo.co/newsletter/">rendezvous with cassidoo</a> for similar puzzles and useful web development content.
-        
-        </p>
-</div>
+                        <p>Also, make sure to subscribe to <a href="https://cassidoo.co/newsletter/">rendezvous with
+                                cassidoo</a> for similar puzzles and useful web development content.
 
-
-
-
+                        </p>
+                    </div>
 
 
 
 
-                    <script>
+                    <select name="theme-select" id="theme-select">
+       
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                        <option value="monkai">Monkai</option>
+                        <option value="github-dark">GitHub Dark</option>
+                        <option value="github-light">GitHub Light</option>
+                        <option value="solarized-light">Solarized Light</option>
+                      
+                        </select> 
+                
+                        <script src="index.js"></script>
 
-                    </script>
+
+
+
 </body>
 
 </html>
