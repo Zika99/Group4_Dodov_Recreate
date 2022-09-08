@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Fira Code", monospace;
+    font-size: 18px;
+}
+p {
+   color: #D9D9D4; 
+}
+body{
+width:100%;
+background: #1e1f1c;
+}
+.container{
+    max-width: 797px;
+    height: 100%;
+    background: #272822;
+    margin: auto;
+}
+/* ----------------------------For Nav bar---------------------------------------------------------- */
+.nav-link{
+    background-color: #1e1f1c;
+    display: inline-flex;
+    width:100%;
+    padding-top: 70px;
+}
+div.container nav.nav-link div.navLinkBlog {
+    background-color: #272822;
+}
+div.container nav .navLink a, div.container nav.nav-link div.navLinkThird a {
+    text-decoration: none;
+    color: #C6C6C5;
+}
+div.container nav.nav-link div.navLink {
+    width: 15%;
+    padding: 8px 10px 8px 10px;
+    margin-right: 1px;
+}    
+
+div.container nav.nav-link div.navLinkThird {
+    width: 53%;
+    padding: 8px 10px 8px 10px;
+    margin-right: 1px;
+    font-size: 16px;
+}    
+
+.fa-solid {
+    color: #C6C6C5;
+}
+
+div.container nav.nav-link div.navLink {
+    background-color:#34352F ;
+}
+
+
+/* ----------------------------For numbers--------------------------------------------------------------- */
+.numbers {
+    margin-top: 25px;
+}
+
+.eachNumber {
+    color:#72736C;
+    padding: 3px 20px 3px 35px;
+    text-align: right;
+}
+
+
+/* ----------------------------For imgs and writeups----------------------------------------------------- */
+.main-container {
+    display: flex;
+}
+
+.blogImgs img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 88%;
+}
+
+.first-head {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.date {
+    margin-top: 25px;
+    margin-left: 142px;
+} 
+
+.p-head {
+    font-size: 16px;
+}
+
+ .head {
+    margin-top: 25px;
+    color: #DCDCD5;
+    font-size: 12px;
+
+}
+
+.heading {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #D9D9D4
+}
+
+.space {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.link {
+    color: #a6e22e;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.link:hover {
+    color: #43769e;
+}
+
+.omo {
+    display: flex;
+    flex-direction: column;
+}
+
+.res {
+    margin-left: 85px;
+}
