@@ -9,6 +9,13 @@ body{
 width:100%;
 background: #1e1f1c;
 font-family: 'Fira Code', monospace;
+
+/* 
+    background-color: var(--bg-color);
+   
+    color: var(--text-color); */
+  
+    
 /* margin: 0 auto; */
 }
 p{
@@ -68,6 +75,10 @@ div.container nav.nav-link div.navLink {
  justify-content: center;
  align-items: center;
     margin: auto;
+    
+    background-color: var(--bg-color);
+   
+    color: var(--text-color);
 }
     
 .content-container{
@@ -352,3 +363,96 @@ line-height: 1.5em;
     padding-top: 24px;
     line-height: 1.5em; 
 }
+
+/* CSs for color-themes */
+
+.drop-list{
+    display: none;
+}
+.mono:hover .drop-list li{
+    display: block;
+}
+
+    :root,
+    :root.light {
+    --bg-color: #fff;
+    --text-color: #1e1e1e;
+    --a-tag: #267f99;
+   --a-tag-hover: #0000ff;
+   --blue-txt: #795e26;
+   --orange-txt: #800000;
+   --purple-txt: #098658;
+   --pink-txt: #0000ff;
+    
+    }
+ 
+    :root.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #d4d4d4;
+    --a-tag: #4ec9b0;
+    --a-tag-hover: #4e94ce;
+    --blue-txt: #dcdcaa;
+    --orange-txt: #ce9178;
+    --purple-txt: #b5cea8;
+    --pink-txt: #569cd6;
+    }
+ 
+    :root.monkai {
+    --bg-color: #272822;
+    --text-color: #f8f8f2;
+    --a-tag: #a6e22e;
+    --a-tag-hover:hover: #4e94ce;
+    --blue-txt: #66d9ef;
+    --orange-txt: #fd971f;
+    --purple-txt: #ae81ff;
+    --pink-txt: #f92672;
+    }
+ 
+    :root.github-dark {
+    --bg-color: #24292e;
+    --text-color: #e1e4e8;
+    --a-tag: #96d0ff;
+    --a-tag-hover: #4e94ce;
+    --blue-txt: #b392f0;
+    --orange-txt: #9ecbff;
+    --purple-txt: #79b8ff;
+    --pink-txt: #f97583;
+    
+    
+    }
+ 
+    :root.solarized-light {
+    --bg-color: #eee8d5;
+    --text-color: #333333;
+    --a-tag: #268bd2;
+    --a-tag-hover: #0000ff;
+    --blue-txt: #66d9ef;
+    --orange-txt: #032f6f;
+    --purple-txt: #ae81ff;
+    --pink-txt: #f92672;
+    
+   
+    }
+ 
+    :root.github-light {
+    --bg-color: #f6f8fa;
+    --text-color: #24292e;
+    --a-tag: #032f62;
+    --a-tag-hover: #0000ff;
+    --blue-txt: #6f42c1;
+    --orange-txt: #032f62;
+    --purple-txt: #79b8ff;
+    --pink-txt: #d73a49;
+
+    
+    }
+
+
+    select {
+        /* padding: 0.25rem 0.75rem; */
+        font-size: 1.25rem;
+        font-family: inherit;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        /* border-radius: 0.25rem; */
+        }

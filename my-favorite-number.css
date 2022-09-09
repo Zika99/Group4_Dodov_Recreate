@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: "Fira Code", monospace;
     font-size: 18px;
+    
 }
 p {
    color: #D9D9D4; 
@@ -12,13 +13,16 @@ p {
 body{
 width:100%;
 background: #1e1f1c;
+
 }
 .container{
     max-width: 797px;
-    height: 100%;
+    height: 2300px;
     background: #272822;
     margin: auto;
 }
+
+
 /* ----------------------------For Nav bar---------------------------------------------------------- */
 .nav-link{
     background-color: #1e1f1c;
@@ -118,4 +122,69 @@ div.container nav.nav-link div.navLink {
 
 .link:hover {
     color: #43769e;
+}
+
+/* ----------------For the footer------------------------------------------------------ */
+.a_line {
+    border: none;
+    margin-top: 28px;
+}
+.a_line::before {
+    content: "//";
+    color: #72736C;
+    margin-left: 10px;
+}
+.a_line::after {
+    content: "------------------------------------------------------------";
+    color: #72736C;
+}
+.footer-links {
+    display: inline-flex;
+    gap: 150px;
+    margin-top: 28px;
+    margin-left: 5px;
+}
+.socials a {
+    border-bottom: 2px solid #90BC39;
+    color: #90BC39;
+    font-size: 18px;
+}
+
+.socials a:hover {
+    color: RGB(78, 148, 206);
+    border-bottom: 2px solid RGB(78, 148, 206);
+}
+.socials li {
+    display:inline-flex;
+}
+.bullet-point {
+    color:#D9D9D4;
+}
+.page-mode a {
+    font-size: 18px;
+    color: #D9D9D4;
+    font-weight: bold;
+}
+select:hover, ::after {
+    color: RGB(78, 148, 206);
+    outline: none;
+    border: none;
+
+}
+select {
+    margin-top: 5px;
+    background:none;
+    color: #DCDCD5;
+    font-size: 18px;
+    border: none;
+    -webkit-appearance: none;
+    font-weight: 800;
+    outline: none;
+
+}
+option {
+    background-color: #272822;
+    color: #D9D9D4;
+    font-weight: 800;
+    border: none;
 }
