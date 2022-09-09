@@ -10,13 +10,6 @@ width:100%;
 background: #1e1f1c;
 font-family: 'Fira Code', monospace;
 
-/* 
-    background-color: var(--bg-color);
-   
-    color: var(--text-color); */
-  
-    
-/* margin: 0 auto; */
 }
 p{
     color: #f8f8f2;
@@ -276,16 +269,17 @@ line-height: 24px;
 
 }
 .pink{
-color: #f92672 ;
+color: var(--pink-txt);
+
 }
 .blue{
-color: #66d9ef;
+color: var(--blue-txt);
 }
 .purple{
-color: #ae81ff;
+color: var(--purple-txt)
 }
 .orange{
-    color: #fd971f;
+    color: var(--orange-txt);
 }
 .opac{
     color: #88846f;
@@ -384,6 +378,7 @@ line-height: 1.5em;
    --orange-txt: #800000;
    --purple-txt: #098658;
    --pink-txt: #0000ff;
+  
     
     }
  
@@ -396,6 +391,7 @@ line-height: 1.5em;
     --orange-txt: #ce9178;
     --purple-txt: #b5cea8;
     --pink-txt: #569cd6;
+   
     }
  
     :root.monkai {
