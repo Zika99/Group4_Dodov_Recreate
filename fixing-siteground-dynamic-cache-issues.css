@@ -119,3 +119,38 @@ div.container nav.nav-link div.navLink {
 .link:hover {
     color: #43769e;
 }
+
+.yellow {
+    color: #E48A1F;
+}
+
+.grey {
+    color: #767361;
+}
+
+.black-b {
+    background-color: #22231E;
+    padding: 20px 0;
+}
+
+.blue {
+    color: #62D0E5;
+}
+
+.lemon {
+    color: #E1D672;
+}
+
+.pink {
+    color: #D72665;
+}
+
+.scroll {
+    overflow-x: scroll;
+    scrollbar-color: #444542;
+    
+}
+
+.scroll:hover {
+    scrollbar-color: #50504f;
+}

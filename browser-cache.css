@@ -128,3 +128,20 @@ div.container nav.nav-link div.navLink {
 .res {
     margin-left: 85px;
 }
+
+.yellow {
+    color: #E48A1F;
+}
+
+.grey {
+    color: #767361;
+}
+
+.black-b {
+    background-color: #22231E;
+    padding: 20px 0;
+}
+
+.green {
+    color: #a6e22e;
+}

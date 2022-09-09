@@ -211,7 +211,7 @@
                         </div>
 
                         <div class="space">
-                            <p>
+                            <p class="grey">
                                 >  "The new feature is live." <br>
                                 >  "I can't see it." <br>
                                 >  "Have you cleared your browser cache?" <br>
@@ -233,7 +233,7 @@
                         </div>
 
                         <div class="space">
-                            <p>When sending the logo to the user, your server can also provide <br> the <a class="link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">Cache-Control response header</a> with an expiration value like <br> max-‍age=604800. This will tell the browser to store the logo <br> locally, on the user's hard drive, for 604800 seconds, which is 7 <br> days. Until that time passes, whenever your website references <br> the logo through the same URL, the user's browser will use its <br> cached version. After that, the browser will request the logo <br> from your server once again and cache it for another 7 days.</p>
+                            <p>When sending the logo to the user, your server can also provide <br> the <a class="link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><span class="yellow">Cache-Control</span> response header</a> with an expiration value like <br> <span class="yellow">max-‍age=604800</span>. This will tell the browser to store the logo <br> locally, on the user's hard drive, for 604800 seconds, which is 7 <br> days. Until that time passes, whenever your website references <br> the logo through the same URL, the user's browser will use its <br> cached version. After that, the browser will request the logo <br> from your server once again and cache it for another 7 days.</p>
                         </div>
                     
                         <diV>
@@ -285,7 +285,7 @@
                             <p>Images and other assets can be cached for longer periods, because even <br> if you pick a way too long TTL, you can change the URL to <br> the resource and trigger a fresh request-response cycle:</p>
                         </diV>
 
-                        <div class="space">
+                        <div class="space black-b">
                             <p>https://example.com/about-us/image.jpg<b>?version=2</b></p>
                         </div>
 
@@ -293,7 +293,7 @@
                             <p>However, if you've chosen to cache the HTML content of your pages <br> as well, you'd have to get around that too, since changing the <br> image URL means changing the HTML. So you'd have to change the <br> page URL as well:</p>
                         </div>
 
-                        <div class="space">
+                        <div class="space black-b">
                             <p>https://example.com/about-us<b>?version=2</b></p>
                         </div>
 
@@ -303,20 +303,20 @@
 
                         <div class="space"><p>If you have the following setup:</p></div>
 
-                        <div><p>-    Browser cache TTL: 30 minutes</p></div>    
-                        <div><p>-    Edge cache TTL: 1 minute</p></div>    
+                        <div><p><span class="green">-</span>    Browser cache TTL: 30 minutes</p></div>    
+                        <div><p><span class="green">-</span>    Edge cache TTL: 1 minute</p></div>    
                         <div><p>…there are several possible outcomes:</p></div>    
                             
                         <div class="space">
-                            <p>1.   If a change happened over 30 minutes ago, both caches would <br> have expired and it's guaranteed that the user will see the <br> updated version.</p>
+                            <p><span class="green">1.</span>   If a change happened over 30 minutes ago, both caches would <br>    have expired and it's guaranteed that the user will see the <br> updated version.</p>
                         </div>
 
                         <div class="space">
-                            <p>2.   If a change happened over 1 minute ago, only the edge cache is <br> guaranteed to have expired. If a user has seen the page within <br> the last 30 minutes and is cached by their browser, they can <br> see the change by clearing their browser cache, opening an <br> incognito window, or doing a <a class="link" target="_blank" href="https://stackoverflow.com/questions/14969315/whats-the-difference-between-normal-reload-hard-reload-and-empty-cache-a">hard reload</a>.</p>
+                            <p><span class="green">2.</span>   If a change happened over 1 minute ago, only the edge cache is <br> guaranteed to have expired. If a user has seen the page within <br> the last 30 minutes and is cached by their browser, they can <br> see the change by clearing their browser cache, opening an <br> incognito window, or doing a <a class="link" target="_blank" href="https://stackoverflow.com/questions/14969315/whats-the-difference-between-normal-reload-hard-reload-and-empty-cache-a">hard reload</a>.</p>
                         </div>
                         
                         <div class="space">
-                            <p>3.   If a change happened less than 1 minute ago, both caches would <br> still be considered fresh. Users will not be able to see the <br> update, even if they clear their browser cache, because the <br> closest edge server would still return the old version. The <br> only solution here is for the website owner to prematurely <br> force the cache to become stale by <a class="link" target="_blank" href="https://developers.cloudflare.com/cache/how-to/purge-cache#purge-by-single-file-by-url">purging it</a>.</p>
+                            <p><span class="green">3.</span>   If a change happened less than 1 minute ago, both caches would <br> still be considered fresh. Users will not be able to see the <br> update, even if they clear their browser cache, because the <br> closest edge server would still return the old version. The <br> only solution here is for the website owner to prematurely <br> force the cache to become stale by <a class="link" target="_blank" href="https://developers.cloudflare.com/cache/how-to/purge-cache#purge-by-single-file-by-url">purging it</a>.</p>
                         </div>
 
                         <div>

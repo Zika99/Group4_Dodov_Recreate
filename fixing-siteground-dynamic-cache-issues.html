@@ -131,11 +131,11 @@
                         </div>
                     
                         <div class="space">
-                            <p>If your website is hosted on SiteGround and you have strange <br> issues, such as clicking on a button and nothing happening, it <br> could be a cache issue. By default, SiteGround caches all <br> requests, as they've said in their help center article:</p>        
+                            <p>If your website is hosted on SiteGround and you have strange <br> issues, such as clicking on a button and nothing happening, it <br> could be a cache issue. By default, SiteGround caches all <br> requests, as they've said in <a class="link" target="_blank" href="https://www.siteground.com/kb/siteground-dynamic-caching-configuration/">their help center article</a>:</p>        
                         </div>
 
                         <div class="space">
-                            <p>
+                            <p class="grey">
                                 >  Our Dynamic caching is a full-page caching mechanism powered <br> 
                                 >  by NGINX that's enabled and running by default on all <br> 
                                 >  SiteGround servers.
@@ -152,37 +152,37 @@
 
                         <div class="space">
                             <p>
-                                SiteGround has built-in exceptions for the cache. For example, if <br> a visitor has the wordpress_logged_in_ or Drupal.visitor.name <br> cookie, they'll bypass the cache and see all changes they make <br> immediately. However, if you're using something other than <br> WordPress or Drupal, like me, you're screwed.
+                                SiteGround has built-in exceptions for the cache. For example, if <br> a visitor has the <span class="yellow">wordpress_logged_in_</span> or <span class="yellow">Drupal.visitor.name</span> <br> cookie, they'll bypass the cache and see all changes they make <br> immediately. However, if you're using something other than <br> WordPress or Drupal, like me, you're screwed.
                             </p>
                         </div>
 
                         <div class="space">
                             <p>
-                                Luckily, SiteGround respects Cache-Control headers that your <br> server sends. You can turn off the cache entirely by adding the <br> following in your main index.php file:</p>
+                                Luckily, SiteGround respects <a class="link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><span class="yellow">Cache-Control</span> headers</a> that your <br> server sends. You can turn off the cache entirely by adding the <br> following in your main <span class="yellow">index.php</span> file:</p>
                             </p>
                         </div>
 
-                        <div class="space">
-                            <p>header('Cache-Control: no-cache');</p>
+                        <div class="space black-b">
+                            <p><span class="blue">header</span>('Cache-Control: no-cache');</p>
                         </div>
 
                         <div class="space">
-                            <p>Alternatively, in case of using Kirby, you could disable it for <br> just the panel by matching the request path with regex:</p>
+                            <p>Alternatively, in case of using Kirby, you could disable it for <br> just the panel by <a class="link" target="_blank" href="https://regex101.com/r/tM1OZT/1">matching the request path with regex</a>:</p>
                         </div>
 
-                        <div class="space">
+                        <div class="space black-b scroll">
                             <p>
-                                if (preg_match('~^/(panel|api)(/|\?|$)~', $_SERVER['REQUEST_URI'])) { <br>
-                                header('Cache-Control: no-cache'); <br>
+                                <span class="pink">if</span> (<span class="blue">preg_match</span>(<span class="lemon">'~^/(panel|api)(/|\?|$)~', $_SERVER['REQUEST_URI'</span>])) { <br>
+                                <span class="blue">header</span>(<span class="lemon">'Cache-Control: no-cache'</span>); <br>
                                 }
                             </p>
                         </div>
 
                         <div class="space">
-                            <p>You can check if this works by inspecting the response headers <br> and looking for the x-proxy-cache header. It tells whether the <br> response was served by the cache or not. If you see the <br> following, the response was not cached:</p>
+                            <p>You can check if this works by <a class="link" target="_blank" href="https://developer.chrome.com/docs/devtools/network/reference/#headers">inspecting the response headers</a> <br> and looking for the <span class="yellow">x-proxy-cache</span> header. It tells whether the <br> response was served by the cache or not. If you see the <br> following, the response was not cached:</p>
                         </div>
 
-                        <div class="space">
+                        <div class="space black-b">
                             <p>x-proxy-cache: MISS</p>
                         </div>
 
@@ -191,14 +191,14 @@
                         </div>
 
                         <div class="space">
-                            <p>Things can be even more confusing if you use Cloudflare, due to <br> its own caching functionality. It has to be enabled explicitly <br> and only caches static files by default, so it has less <br> unpleasant surprises. In my opinion, it doesn't make much sense <br> to have both caches enabled, so you should probably disable one <br> or the other. You can determine the Cloudflare cache status by <br> looking at the cf-cache-status header.</p>
+                            <p>Things can be even more confusing if you use Cloudflare, due to <br><a class="link" target="_blank" href="https://developers.cloudflare.com/cache/about/default-cache-behavior">its own caching functionality</a>. It has to be enabled explicitly <br> and only caches static files by default, so it has less <br> unpleasant surprises. In my opinion, it doesn't make much sense <br> to have both caches enabled, so you should probably disable one <br> or the other. You can determine the Cloudflare cache status by <br> looking at the <span class="yellow">cf-cache-status</span> header.</p>
                         </div>
 
                         <div class="space">
                             <p>The response is cached by Cloudflare if you have these headers:</p>
                         </div>
 
-                        <div class="space">
+                        <div class="space black-b">
                             <p>
                                 cf-cache-status: HIT <br>
                                 x-proxy-cache: MISS
@@ -209,7 +209,7 @@
                             <p>…and you get these headers if it's cached by SiteGround instead:</p>
                         </div>
 
-                        <div class="space">
+                        <div class="space black-b">
                             <p>
                                 cf-cache-status: DYNAMIC <br>
                                 x-proxy-cache: HIT
