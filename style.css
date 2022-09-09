@@ -200,22 +200,39 @@ div.container nav.nav-link div.navLink {
 .of{
     display: flex;
     flex-direction: column;
+    line-height: 26px;
+    /* font-weight: 400;
+    font-size: 16px; */
 }
 .ofone{
-    padding-bottom: 5px;
+   
+    font-size: 20px;
+    line-height: 24px;
+     font-weight: 700;
+   
 }
 .time{
-    /* margin-left: 130px; */
-    /* display: flex; */
+    margin-left: 130px;
+  
     justify-content: right;
+
+line-height: 24px;
 }
+.time-p{
+    font-size: 13px;
+line-height: 24px;
+font-weight: 400;
+}
+
+
 .cover{
     margin-top: 13px;
 }
 .in{
     width: 90%;
-    padding-top: 22px;
+    padding-top: 29px;
     line-height: 1.5em;
+
 }
 a{
     color: #a6e22e;
@@ -244,7 +261,7 @@ a:hover{
     line-height: 1.5em; 
 }
 .ide{
-    padding-top: 40px;
+    padding-top: 42px;
 }
 .let{
     width: 88%;
@@ -266,6 +283,9 @@ code{
 line-height: 24px;
 
 
+}
+.code{
+    
 }
 .pink{
 color: var(--pink-txt);
