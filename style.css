@@ -31,6 +31,7 @@ h1,h2,h3,h4{
 }
 div.container nav.nav-link div.navLinkBlog {
     background-color: #272822;
+    
 }
 div.container nav .navLink a, div.container nav.nav-link div.navLinkBlog a {
     text-decoration: none;
@@ -43,6 +44,7 @@ div.container nav.nav-link div.navLink, div.container nav.nav-link div.navLinkBl
 }
 div.container nav.nav-link div.navLink {
     background-color:#34352F ;
+    
 }
 
 .ho{
@@ -64,14 +66,13 @@ div.container nav.nav-link div.navLink {
     max-width: 797px;
     /* height: 1776px; */
     background: #272822;
-    
  justify-content: center;
  align-items: center;
     margin: auto;
     
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
    
-    color: var(--text-color);
+    /* color: var(--text-color); */
 }
     
 .content-container{
@@ -139,9 +140,9 @@ div.container nav.nav-link div.navLink {
     font-size: 13px;
     padding-top: 5px;
 }
-.num:active{
+/* .num:active{
     
-}
+} */
 .num-head{
     display: flex;
 }
@@ -472,3 +473,233 @@ line-height: 1.5em;
         color: var(--text-color);
         /* border-radius: 0.25rem; */
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* TOMI CSS */
+
+
+
+        
+/* TOMI CSS */
+
+
+
+
+
+.project{
+    margin-bottom: 25px;
+}
+
+.article-bar{
+    color: #fff;
+}
+
+.article-div{
+    
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.article-img{
+    margin-right: 15px;
+}
+
+.article-img-img{
+    width:104.609px;
+    height: 102px;
+}
+
+/* .margin-number{
+    color:#72736C;
+    padding: 3px 20px 3px 35px;
+    text-align: right;
+} */
+
+.article-h3{
+    color: rgb(248, 248, 242);
+    font-size: 19.125px;
+    font-weight: 700;
+    font-family: "fira code", monospace;
+    line-height: 25.5px;
+    text-decoration: none;
+}
+
+.article-h3:hover{
+    color:  rgb(78, 148, 206);;
+}
+
+.writeup-p{
+    /* border: 2px solid white; */
+    margin-top: -20px;
+    width: 80%;
+    color: rgb(248, 248, 242);
+    font-size: 17px;
+    font-family: "fira code", monospace;
+    line-height: 25.5px;
+}
+
+
+.underlined-link{
+    color: rgb(166, 226, 66);
+    font-size: 17px;
+    font-family: "fira code", monospace;
+    line-height: 25.5px;
+    text-decoration-line: underline;
+}
+
+.underlined-link:hover{
+    color:  rgb(78, 148, 206);
+}
+
+
+
+.article-img-imgg{
+    display: flex;
+}
+
+.view-more-link{
+    color: rgb(248, 248, 242);
+    font-size: 17px;
+    font-family: "fira code", monospace;
+    line-height: 25.5px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.view-more-link:hover{
+    color:  rgb(78, 148, 206);
+}
+
+.iconn-logo{
+    color: rgb(166, 226, 66);
+    
+}
+
+.iconn-logo:hover{
+    color:  rgb(78, 148, 206);
+}
+
+/* hr::before{
+    content: "//";
+    margin-right: 10px;
+    color: rgb(136, 132, 111);
+}
+
+hr::after{
+    content: "-------------------------------------------------------------------------";
+    color: rgb(136, 132, 111);
+} */
+/* 
+.jkll{
+    display: flex;
+    color: rgb(136, 148, 111);
+}
+
+.jkll-1{
+    margin-right: 10px;
+    
+}
+
+.dash-line{
+    overflow: hidden;
+} */
+
+
+
+.a_line {
+    border: none;
+    margin-top: 28px;
+    overflow: hidden;
+}
+.a_line::before {
+    content: "//";
+    color: #72736C;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.a_line::after {
+    content: "------------------------------------------------------------";
+    overflow-wrap: anywhere;
+    font-variant-ligatures: none;
+    color: #72736C;
+} 
+
+.foooter{
+    display: flex;
+    justify-content:space-between;
+    max-width: 620px;
+    
+}
+
+.sspan{
+    /* border: 1px solid red; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ /* .f-ul{
+    display: block;
+} 
+
+ .f-li{
+    display: inline-block;
+     border: 3px solid red; 
+} 
+
+.hhh{
+    content: "\OOB7";
+    font-size: 40px;
+}   */
+
+
+.underlined-f-link{     
+    
+color: rgb(166, 226, 66);
+    font-size: 17px;
+    font-family: "fira code", monospace;
+    line-height: 25.5px;
+    text-decoration-line: underline;
+}
+
+.underlined-f-link:hover{
+    color:  rgb(78, 148, 206);
+}
+
+
+
+@media screen and (max-width:1440px) and  (min-width:600px) {
+    .underlined-link-1{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .underlined-link-1{
+        visibility: visible;
+    }
+
+    .p-3{
+        visibility: hidden;
+
+    }
+    
+}
+
