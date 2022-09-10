@@ -74,15 +74,19 @@ div.container nav.nav-link div.navLink {
 .imgAndWriteUp {
     display: flex;
     margin-bottom: 20px;
+    
 }
 
 .blogImgs img {
     width: 100%;
+    
 }
 .blogImgs {
     width: 160px;
     margin-right: 15px;
+    
 }
+
 .blogWriteUp {
     width: 62% ;
 }
