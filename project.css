@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,200;0,400;0,700;0,800;1,200;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -41,17 +43,38 @@ div.container nav.nav-link div.navLink {
 
 /* Digit styling */
 .nav-label{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .label-number{
    margin: 0 20px 0 50px;
+   text-decoration: none;
+   color: #90908a;
+   font-family: 'Fira Code', monospace;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: right;
+}
+
+.label-number:hover {
+    color: #c2c2bf;
 }
 
 .label-number2{
     margin-left: 44px;
     margin-right: 20px;
+    text-decoration: none;
+    color: #90908a;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
 }
+
+.label-number2:hover{
+    color: #c2c2bf;
+}
+
 /* Image and text number styling */
 .image-text{
     display: flex;
@@ -68,45 +91,131 @@ p{
     color: #f8f8f2;
 }
 
+.label1{
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: normal;
+    text-align: start;
+    color: #f8f8f2;
+}
+
+.label2{
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-align: start;
+    color: #cfcfc2;
+}
+
+.label3{
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #f8f8f2;
+    text-decoration: none;
+}
+
+.label4{
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #f8f8f2;
+}
+
+.label5{
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #a6e22e;
+}
+
+.line{
+    /* font-family: 'Fira Code', monospace; */
+    /* font-weight: 300; */
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #88846f;
+
+}
 
 /* ----------------For the footer------------------------------------------------------ */
 .a_line {
     border: none;
-    margin-top: 28px;
+    /* margin-top: 28px; */
 }
 .a_line::before {
     content: "//";
-    color: #72736C;
-    margin-left: 10px;
+    color: #88846f;
+    /* margin-left: 10px; */
 }
 .a_line::after {
-    content: "----------------------------------------------------------------------";
-    color: #72736C;
+    content: "--------------------------------------------------------------------------------";
+    color: #88846f;
 }
 .footer-links {
     display: inline-flex;
     /* gap: 150px; */
-    margin-top: 28px;
-    margin-left: 5px;
+    /* margin-top: 28px; */
+    /* margin-left: 5px; */
 }
 .socials a {
-    border-bottom: 2px solid #90BC39;
+    /* border-bottom: 2px solid #90BC39; */
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
     color: #90BC39;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+    letter-spacing: normal;
 }
 .socials a:hover {
     color: RGB(78, 148, 206);
-    border-bottom: 2px solid RGB(78, 148, 206);
+    /* border-bottom: 2px solid RGB(78, 148, 206); */
 }
-.page-mode a{
+.socials li {
+    display:inline-flex;
+}
+.bullet-point {
+    color:#D9D9D4;
+}
+.page-mode a {
     font-size: 18px;
     color: #D9D9D4;
     font-weight: bold;
-    margin-left: 250px;
 }
-.mono:hover, .symbol:hover {
+select:hover {
     color: RGB(78, 148, 206);
 }
-.symbol {
-    color: #90BC39;
+select {
+    margin-top: 5px;
+    background:none;
+    color: #DCDCD5;
+    font-size: 15px;
+    border: none;
+    -webkit-appearance: none;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+option {
+    background-color: #272822;
+    color: #D9D9D4;
+}
+
+.mode-div{
+    margin-left: 200px;
 }
