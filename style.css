@@ -257,7 +257,7 @@ color:  rgb(78, 148, 206);
     content: "----------------------------------------------------------------------";
     color: #72736C;
 }
-/* .footer-links {
+.footer-links {
     display: inline-flex;
     gap: 90px;
     text-decoration: none;
@@ -282,6 +282,7 @@ color:  rgb(78, 148, 206);
 }
 .socials li {
     display:inline-flex;
+    text-decoration: none;
 }
 .bullet-point {
     color:#D9D9D4;
