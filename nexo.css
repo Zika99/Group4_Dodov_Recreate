@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,200;0,400;0,700;0,800;1,200;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+width:100%;
+background: #1e1f1c;
+}
+
+.container{
+    max-width: 797px;
+    min-width: 300px;
+    height: 1776px;
+    background: #272822;
+    margin: auto;
+}
+
+/* ----------------------------For Nav bar---------------------------------------------------------- */
+.nav-link{
+    background-color: #1e1f1c;
+    display: inline-flex;
+    width:100%;
+    padding-top: 70px;
+}
+div.container nav.nav-link div.navLinkProject {
+    background-color: #272822;
+}
+div.container nav .navLink a, div.container nav.nav-link div.navLinkProject a {
+    text-decoration: none;
+    color: #C6C6C5;
+}
+div.container nav.nav-link div.navLink, div.container nav.nav-link div.navLinkProject {
+    width: 15%;
+    padding: 8px 10px 8px 10px;
+    margin-right: 1px;
+}    
+div.container nav.nav-link div.navLink {
+    background-color:#34352F ;
+}
+
+.newnav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-nav:hover{
+    /* color: red; */
+    border: 1px solid #C6C6C5;
+    padding-left:5px;
+    /* padding-right: 5px; */
+    /* font-weight: 100; */
+}
+
+.navLinkProjectCursor{
+    cursor: default;
+}
+
+/* Digit styling */
+.nav-label{
+    margin-top: 30px;
+}
+
+.label-number{
+   margin: 0 20px 0 50px;
+   text-decoration: none;
+   color: #90908a;
+   font-family: 'Fira Code', monospace;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: right;
+}
+
+.label-number:hover {
+    color: #c2c2bf;
+}
+
+.label-number2{
+    margin-left: 44px;
+    margin-right: 20px;
+}
+/* Image and text number styling */
+.image-text{
+    display: flex;
+}
+
+.label-image{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+p{
+    line-height: 24px;
+    color: #f8f8f2;
+}
+
+.label1{
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: normal;
+    text-align: start;
+    color: #f8f8f2;
+}
+
+.label2{
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-align: start;
+    color: #cfcfc2;
+}
+
+.label3{
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #f8f8f2;
+    
+}
+
+.label4{
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #f8f8f2;
+}
+
+.label5{
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #a6e22e;
+}
+
+/* ----------------For the footer------------------------------------------------------ */
+.a_line {
+    border: none;
+    /* margin-top: 28px; */
+}
+.a_line::before {
+    content: "//";
+    color: #88846f;
+    /* margin-left: 10px; */
+}
+.a_line::after {
+    content: "--------------------------------------------------------------------------------";
+    color: #88846f;
+}
+.footer-links {
+    display: inline-flex;
+    /* gap: 150px; */
+    /* margin-top: 28px; */
+    /* margin-left: 5px; */
+}
+.socials a {
+    /* border-bottom: 2px solid #90BC39; */
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    color: #90BC39;
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+.socials a:hover {
+    color: RGB(78, 148, 206);
+    /* border-bottom: 2px solid RGB(78, 148, 206); */
+}
+.socials li {
+    display:inline-flex;
+}
+.bullet-point {
+    color:#D9D9D4;
+}
+.page-mode a {
+    font-size: 18px;
+    color: #D9D9D4;
+    font-weight: bold;
+}
+select:hover {
+    color: RGB(78, 148, 206);
+}
+select {
+    margin-top: 5px;
+    background:none;
+    color: #DCDCD5;
+    font-size: 15px;
+    border: none;
+    -webkit-appearance: none;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+option {
+    background-color: #272822;
+    color: #D9D9D4;
+}
+
+.mode-div{
+    margin-left: 200px;
+}
